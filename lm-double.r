@@ -27,8 +27,14 @@ my_df$y_full <- predict(dfit, newdata = my_df)
 my_df
 
 # trouble №2
+str(mtcars)
+df <- mtcars[c(1,3,4,5,6)]
+dfit <- lm(wt~.,data=df)
+summary(dfit)
+step(dfit, direction = 'backward')
+model <- lm(wt ~ mpg + disp + hp,data = df)
 
-df <- 
+
 
 # trouble №3
 
@@ -71,9 +77,3 @@ my_plot <- ggplot(mtcars, aes(x=wt,y=mpg,col=factor(am)))+
 
 
 my_plot
-
-
-
-
-
-
